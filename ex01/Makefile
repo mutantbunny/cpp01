@@ -2,9 +2,9 @@ CC = g++
 CFLAGS = -Wall -Wextra -Werror -ggdb -std=c++98
 RM = rm -f
 
-NAME = zombie
+NAME = horde
 
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS = main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
