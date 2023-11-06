@@ -6,7 +6,7 @@
 /*   By: gmachado <gmachado@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 00:14:46 by gmachado          #+#    #+#             */
-/*   Updated: 2023/11/05 00:46:23 by gmachado         ###   ########.fr       */
+/*   Updated: 2023/11/06 00:45:38 by gmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Zombie
 		void announce(void);
 
 	private:
-		 std::string name;
+		 std::string _name;
 };
 
 #endif

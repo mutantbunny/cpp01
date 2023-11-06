@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmachado <gmachado@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 00:14:43 by gmachado          #+#    #+#             */
-/*   Updated: 2023/11/06 00:45:56 by gmachado         ###   ########.fr       */
+/*   Created: 2023/11/05 02:43:52 by gmachado          #+#    #+#             */
+/*   Updated: 2023/11/06 01:56:22 by gmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie::Zombie(void): _name("Unnamed") { }
+HumanB::HumanB(std::string name):
+	_name(name), _weapon(NULL) { }
 
-Zombie::~Zombie()
+void HumanB::setWeapon(Weapon &weapon)
 {
-	std::cout << "Zombie " << _name << " destroyed." << std::endl;
+	_weapon = &weapon;
 }
 
-void Zombie::set_name(std::string name)
+void HumanB::attack(void)
 {
-	_name = name;
-}
-
-void Zombie::announce(void)
-{
-	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	if (!_weapon)
+		std::cout << _name << " attacks with their bare hands (no weapon set)"
+			<< std::endl;
+	else
+		std::cout << _name << " attacks with their "
+			<< this->_weapon->getType() << std::endl;
 }
