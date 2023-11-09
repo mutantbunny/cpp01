@@ -39,9 +39,6 @@ void Harl::error(void)
 
 void Harl::filter(std::string level)
 {
-	if (level != "DEBUG" && level != "INFO"
-		&& level != "WARNING" && level != "ERROR")
-		return;
 	switch(get_hash(level))
 	{
 		case Harl::DEBUG:
