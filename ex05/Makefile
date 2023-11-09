@@ -2,11 +2,11 @@ CC = g++
 CFLAGS = -Wall -Wextra -Werror -ggdb -std=c++98
 RM = rm -f
 
-NAME = violence
+NAME = harl
 
-INCS = HumanA.hpp HumanB.hpp Weapon.hpp
+INCS = Harl.hpp
 
-SRCS = HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
+SRCS = Harl.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
