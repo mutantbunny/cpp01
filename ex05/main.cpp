@@ -7,17 +7,17 @@ int main(void)
 	std::cout << "\nDEBUG level message:\n";
 	harl.complain("DEBUG");
 
-	std::cout << "\nINFO level message:\n";
+	std::cout << "INFO level message:\n";
 	harl.complain("INFO");
 
-	std::cout << "\nWARNING level message:\n";
+	std::cout << "WARNING level message:\n";
 	harl.complain("WARNING");
 
-	std::cout << "\nERROR level message:\n";
+	std::cout << "ERROR level message:\n";
 	harl.complain("ERROR");
 
-	std::cout << "\nUnknown levels should be ignored (test with"
-					" unknown 'BLAH' level, no message"
+	std::cout << "Unknown levels should be ignored (test with"
+					" unknown BLAH level, no message"
 					" expected after this line):\n";
 	harl.complain("BLAH");
 

@@ -1,12 +1,6 @@
 #include "Harl.hpp"
 
-Harl::Harl(void)
-{
-	complaints[Harl::DEBUG] = &Harl::debug;
-	complaints[Harl::INFO] = &Harl::info;
-	complaints[Harl::ERROR] = &Harl::error;
-	complaints[Harl::WARNING] = &Harl::warning;
-}
+Harl::Harl(void) { }
 
 int Harl::get_hash(std::string level)
 {
@@ -43,11 +37,33 @@ void Harl::error(void)
 					" speak to the manager now.\n" << std::endl;
 }
 
-void Harl::complain(std::string level)
+void Harl::filter(std::string level)
 {
 	if (level != "DEBUG" && level != "INFO"
 		&& level != "WARNING" && level != "ERROR")
 		return;
+	switch(get_hash(level))
+	{
+		case Harl::DEBUG:
+			debug();
+			info();
+			warning();
+			error();
+			break;
 
-	((this)->*(complaints[get_hash(level)]))();
+		case Harl::INFO:
+			info();
+			warning();
+			error();
+			break;
+
+		case Harl::WARNING:
+			warning();
+			error();
+			break;
+
+		case Harl::ERROR:
+			error();
+	}
+
 }
