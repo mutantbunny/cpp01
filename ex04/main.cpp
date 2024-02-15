@@ -6,7 +6,7 @@
 /*   By: gmachado <gmachado@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 03:44:38 by gmachado          #+#    #+#             */
-/*   Updated: 2023/11/08 02:10:32 by gmachado         ###   ########.fr       */
+/*   Updated: 2024/02/15 03:10:39 by gmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,8 @@ int main(int argc, char **argv)
 
 		if (outfile.bad())
 		{
-			std::cerr << "Error: could not write to file " << outfile_name << std::endl;
+			std::cerr << "Error: could not write to file " << outfile_name
+				<< std::endl;
 			return (1);
 		}
 
@@ -96,7 +97,8 @@ int main(int argc, char **argv)
 
 		if (outfile.bad())
 		{
-			std::cerr << "Error: could not write to file " << outfile_name << std::endl;
+			std::cerr << "Error: could not write to file " << outfile_name
+				<< std::endl;
 			return (1);
 		}
 	}
